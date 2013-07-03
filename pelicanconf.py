@@ -40,3 +40,6 @@ DEFAULT_PAGINATION = 5
 
 # Selec the theme
 THEME = 'themes/github-sundown'
+
+# Enable Disqus
+DISQUS_SITENAME = 'keningleblog'
