@@ -6,8 +6,6 @@ Slug: passing-url-parameters-to-a-decorator-in-django
 Author: Ken Ingle
 Summary: How to use a decorator and pass URL parameters from a view
 
-# Passing URL Parameters to a Decorator in Django
-
 I have been working on a small project where I needed to pass a URL parameter to a decorator I was writing.  In an ongoing effort to follow the principal of DRY, I have found that decorators (when used at the right time) can really help.  I was able to find no shortage of examples where decorators made life easier in django applications (e.g. login_required).
 
 After a bit of searching and asking around I came across a really great blog post by Charles Leifer describing in details how to accomplish almost exactly what I needed.

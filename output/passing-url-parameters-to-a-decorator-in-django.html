@@ -15,8 +15,9 @@
   <body>
     <div class="wrapper">
       <header>
+        <div><img src="http://www.gravatar.com/avatar/f4abeb025b3a14c71c4fc44be1191497?s=120&d=http%3A%2F%2Fwww.example.com%2Fdefault.jpg" class="grv-img"/></div>
         <h1><a href="/">KenIngle.com </a></h1>
-        <p></p>
+        <p>Random thoughts about technology, travel and other things that interest me.</p>
 
 
         <p class="view"></p>
@@ -25,25 +26,20 @@
       <section>
       <section id="content" class="body">
   <article>
-    <header>
-      <span class="octicon octicon-link">
+      <h1>
         <a href="/passing-url-parameters-to-a-decorator-in-django.html" rel="bookmark"
-           title="Permalink to Passing URL Parameters to a Decorator in Django">Passing URL Parameters to a Decorator in Django</a></span>
-          </header>
-
+           title="Permalink to Passing URL Parameters to a Decorator in Django">Passing URL Parameters to a Decorator in Django</a>
+      </h1>
+      
     <div class="entry-content">
-      <footer class="post-info">
-        <abbr class="published" title="2013-07-03T11:57:00">
-                Wed 03 July 2013
-        </abbr>
-
-                <address class="vcard author">
-                By <a class="url fn" href="/author/ken-ingle.html">Ken Ingle</a>
-        </address>
-        <p>In <a href="/category/blog.html">Blog</a>. </p>
-<p>tags: <a href="/tag/django.html">django</a><a href="/tag/python.html">python</a></p>
-</footer><!-- /.post-info -->      <h1>Passing URL Parameters to a Decorator in Django</h1>
-<p>I have been working on a small project where I needed to pass a URL parameter to a decorator I was writing.  In an ongoing effort to follow the principal of DRY, I have found that decorators (when used at the right time) can really help.  I was able to find no shortage of examples where decorators made life easier in django applications (e.g. login_required).</p>
+      <small>
+<abbr class="published" title="2013-07-03T11:57:00">
+  Wed 03 July 2013
+</abbr> | 
+  tags: 
+      <a href="/tag/django.html">django</a>, 
+      <a href="/tag/python.html">python</a>, 
+  </small>      <p>I have been working on a small project where I needed to pass a URL parameter to a decorator I was writing.  In an ongoing effort to follow the principal of DRY, I have found that decorators (when used at the right time) can really help.  I was able to find no shortage of examples where decorators made life easier in django applications (e.g. login_required).</p>
 <p>After a bit of searching and asking around I came across a really great blog post by Charles Leifer describing in details how to accomplish almost exactly what I needed.</p>
 <p>For the purposes of this example, let’s assume I have a Company model where I have defined a company_admin foreign key that relates to a user object as the admin for the company (in practice I would recommend using the groups and permissions already built into django, but this is just an example).</p>
 <p>Let’s say I have a URL pattern that looks something like this:</p>

@@ -3,12 +3,11 @@
 {% block content %}
 <section id="content" class="body">
   <article>
-    <header>
-      <span class="octicon octicon-link">
+      <h1>
         <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-           title="Permalink to {{ article.title|striptags }}">{{ article.title}}</a></span>
+           title="Permalink to {{ article.title|striptags }}">{{ article.title}}</a>
+      </h1>
       {% include 'twitter.html' %}
-    </header>
 
     <div class="entry-content">
       {% include 'article_infos.html' %}
