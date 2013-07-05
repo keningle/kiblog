@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>My Development Stack (2011) KenIngle.com</title>
+
+    <link rel="stylesheet" href="/theme/css/main.css">
+    <link rel="stylesheet" href="/theme/css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div><img src="http://www.gravatar.com/avatar/f4abeb025b3a14c71c4fc44be1191497?s=120&d=http%3A%2F%2Fwww.example.com%2Fdefault.jpg" class="grv-img"/></div>
+        <div class="title"><a href="/">KenIngle.com </a></div>
+        <div class="sub-title">Random thoughts about technology, travel and other things that interest me.</div>
+
+        <p>
+      <div class="view"><a href="/pages/about.html">About</a></div>
+    <div class="view"><a href="/archives.html">Archives</a></div>
+</p>
+
+<!-- Social links -->
+<div class="social">
+<h4>Follow Me</h4>
+<ul>
+      <li><a href="https://github.com/keningle">Github</a></li>
+      <li><a href="http://twitter.com/ken_ingle">Twitter</a></li>
+      <li><a href="http://www.linkedin.com/in/kingle">LinkedIn</a></li>
+      <li><a href="https://plus.google.com/112319762460398400993/posts">Google+</a></li>
+  </ul>
+</div>
+
+      </header>
+      <section>
+      <section id="content" class="body">
+  <article>
+      <div class="article-title">
+        My Development Stack (2011)
+      </div>
+
+    <div class="entry-content">
+      <p>
+<small>
+<abbr class="published" title="2011-08-20T00:00:00">
+  Sat 20 August 2011
+</abbr> | 
+  tags: 
+      <a href="/tag/python.html">python</a>, 
+      <a href="/tag/dev.html">dev</a>, 
+      <a href="/tag/flask.html">flask</a>, 
+      <a href="/tag/javascript.html">javascript</a>, 
+   -- (<a href="/dev-stack-2011.html" rel="bookmark">permalink</a>)
+</small>
+</p>      <p>A friend asked me a few days ago what I was using to develop a project I have been working on in my spare time.  This then lead to the question of what tools I used on my Mac to handle the development.  So after a little thinking, here was my answer.</p>
+<p>At our office we primarily use Django, which I love.  For my personal/outside of work projects I have been using Flask.  Flask is a bit lighter weight and quite portable.  This is important because I have been using AppEngine for a couple of recent projects and Flask plays quite nicely on AppEngine (here is a blog post explaining the basics of how to make it work, I have modified slightly to used the packages in zip files instead of uncompressed).  Overall this is the basic stack:</p>
+<p>Backend = Python (using Flask), WTForms and Google AppEngine
+Frontend = jQuery, jQueryUI, Less, and have been playing with Twitter Bootstrap</p>
+<p>On my Mac I use a number of software packages to make life easier:</p>
+<ul>
+<li>iTerm2 - Replaces the absolutely CRAPPY terminal that comes with Mac.</li>
+<li>Coda - just recently started using this for code/text editing.  I still find myself using TextMate and even vim for some things, but overall I like Coda.</li>
+<li>LESS.app - Just makes running/managing Less that much easier.</li>
+<li>AppEngine SDK - Again, makes life easy when dealing with AppEngine.</li>
+<li>CyberDuck - I know that Coda has FTP built in, just haven’t started using it yet.</li>
+<li>Homebrew - how anyone could live without this package manager is beyond me.</li>
+<li>Chrome, Firefox, Firebug - Browsing, testing, debugging things.</li>
+<li>AquaData Studio - for those times I am not using AppEngine.</li>
+<li>Remember the Milk - helps with my tasks.</li>
+<li>Mercurial / BitBucket - This is where I keep all of my code, I HIGHLY recommend mercurial for version control (git is also quite nice, as well as github).</li>
+<li>So there you go, my basic stack.  There is more software for sure, but this is the majority of my day to day use.  Recommendations are always welcome.</li>
+</ul>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="ken_ingle">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</section>
+      </section>
+      <footer>
+        <p><small>&copy; KenIngle.com &mdash; Theme based on Sundown by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <!-- Scale fix -->
+    <script>
+      var metas = document.getElementsByTagName('meta');
+      var i;
+      
+      if (navigator.userAgent.match(/iPhone/i)) {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+          }
+        }
+      
+        document.addEventListener("gesturestart", gestureStart, false);
+      }
+
+      function gestureStart() {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
