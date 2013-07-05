@@ -18,7 +18,8 @@ GRV_URL += urllib.urlencode({'d':DEFAULT_GRV_URL, 's':str(GRV_SIZE)})
 
 SITESUBTITLE = u'Random thoughts about technology, travel and other things that interest me.'
 
-TIMEZONE = 'Europe/Paris'
+LOCALE = ('en_us',)
+DATE_FORMATS = {'en_us': '%a, %b %d, %Y', }
 
 DEFAULT_LANG = u'en'
 
@@ -31,6 +32,7 @@ TRANSLATION_FEED_ATOM = None
 SOCIAL = (('Github', 'https://github.com/keningle'),
 		  ('Twitter', 'http://twitter.com/ken_ingle'),
           ('LinkedIn', 'http://www.linkedin.com/in/kingle'),
+          ('Google+', 'https://plus.google.com/112319762460398400993/posts'),
           )
 
 DEFAULT_PAGINATION = 5
@@ -43,3 +45,9 @@ THEME = 'themes/github-sundown'
 
 # Enable Disqus
 DISQUS_SITENAME = 'keningleblog'
+
+# Enable twitter information
+TWITTER_USERNAME = 'ken_ingle'
+
+# Summary length
+SUMMARY_MAX_LENGTH = 50

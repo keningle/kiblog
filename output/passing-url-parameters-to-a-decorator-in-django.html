@@ -16,33 +16,45 @@
     <div class="wrapper">
       <header>
         <div><img src="http://www.gravatar.com/avatar/f4abeb025b3a14c71c4fc44be1191497?s=120&d=http%3A%2F%2Fwww.example.com%2Fdefault.jpg" class="grv-img"/></div>
-        <h1><a href="/">KenIngle.com </a></h1>
-        <p>Random thoughts about technology, travel and other things that interest me.</p>
+        <div class="title"><a href="/">KenIngle.com </a></div>
+        <div class="sub-title">Random thoughts about technology, travel and other things that interest me.</div>
 
-        <ul>
+        <p>
+      <div class="view"><a href="/pages/about.html">About</a></div>
+    <div class="view"><a href="/archives.html">Archives</a></div>
+</p>
+
+<!-- Social links -->
+<div class="social">
+<h4>Follow Me</h4>
+<ul>
       <li><a href="https://github.com/keningle">Github</a></li>
       <li><a href="http://twitter.com/ken_ingle">Twitter</a></li>
       <li><a href="http://www.linkedin.com/in/kingle">LinkedIn</a></li>
+      <li><a href="https://plus.google.com/112319762460398400993/posts">Google+</a></li>
   </ul>
+</div>
 
       </header>
       <section>
       <section id="content" class="body">
   <article>
-      <h1>
-        <a href="/passing-url-parameters-to-a-decorator-in-django.html" rel="bookmark"
-           title="Permalink to Passing URL Parameters to a Decorator in Django">Passing URL Parameters to a Decorator in Django</a>
-      </h1>
-      
+      <div class="article-title">
+        Passing URL Parameters to a Decorator in Django
+      </div>
+
     <div class="entry-content">
-      <small>
-<abbr class="published" title="2013-07-03T11:57:00">
+      <p>
+<small>
+<abbr class="published" title="2013-07-03T00:00:00">
   Wed 03 July 2013
 </abbr> | 
   tags: 
       <a href="/tag/django.html">django</a>, 
       <a href="/tag/python.html">python</a>, 
-  </small>      <p>I have been working on a small project where I needed to pass a URL parameter to a decorator I was writing.  In an ongoing effort to follow the principal of DRY, I have found that decorators (when used at the right time) can really help.  I was able to find no shortage of examples where decorators made life easier in django applications (e.g. login_required).</p>
+   -- (<a href="/passing-url-parameters-to-a-decorator-in-django.html" rel="bookmark">permalink</a>)
+</small>
+</p>      <p>I have been working on a small project where I needed to pass a URL parameter to a decorator I was writing.  In an ongoing effort to follow the principal of DRY, I have found that decorators (when used at the right time) can really help.  I was able to find no shortage of examples where decorators made life easier in django applications (e.g. login_required).</p>
 <p>After a bit of searching and asking around I came across a really great blog post by Charles Leifer describing in details how to accomplish almost exactly what I needed.</p>
 <p>For the purposes of this example, let’s assume I have a Company model where I have defined a company_admin foreign key that relates to a user object as the admin for the company (in practice I would recommend using the groups and permissions already built into django, but this is just an example).</p>
 <p>Let’s say I have a URL pattern that looks something like this:</p>
@@ -102,13 +114,14 @@
 
 
 <p>This creates a re-usable decorator that utilizes URL parameters.  I hope this helps more people than just me.  Feel free to comment if there is a better way to do this or if I should change something.</p>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="ken_ingle">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     </div><!-- /.entry-content -->
     
   </article>
 </section>
       </section>
       <footer>
-        <p><small>&copy; Ken Ingle 2013, &mdash; Theme based on Sundown by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p><small>&copy; KenIngle.com &mdash; Theme based on Sundown by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <!-- Scale fix -->

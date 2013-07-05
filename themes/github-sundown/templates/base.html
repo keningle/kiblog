@@ -16,8 +16,8 @@
     <div class="wrapper">
       <header>
         <div><img src="{{ GRV_URL }}" class="grv-img"/></div>
-        <h1><a href="{{ SITEURL }}/">{{ SITENAME }} </a></h1>
-        <p>{% if SITESUBTITLE %}{{ SITESUBTITLE }}{% endif %}</p>
+        <div class="title"><a href="{{ SITEURL }}/">{{ SITENAME }} </a></div>
+        <div class="sub-title">{% if SITESUBTITLE %}{{ SITESUBTITLE }}{% endif %}</div>
 
         {% include 'sidebar.html' %}
 
@@ -28,7 +28,7 @@
       {% endblock %}
       </section>
       <footer>
-        <p><small>&copy; Ken Ingle 2013, &mdash; Theme based on Sundown by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p><small>&copy; {{ SITENAME }} &mdash; Theme based on Sundown by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <!-- Scale fix -->

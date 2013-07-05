@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
   {% if articles %}
-    {% for article in articles %}
-    <div class="octicon octicon-link">
-      <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
-    </div>
+    {% for article in (articles_page.object_list if articles_page else articles) %}
+    <div class="front-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></div>
+    {% include 'article_infos.html' %}
+    {{ article.summary }} 
+    <div class="read-more"><a href="{{ SITEURL }}/{{ article.url }}">read more...</a></div>
+    <hr />
     {% endfor %}
   {% endif %}
 {% endblock %}

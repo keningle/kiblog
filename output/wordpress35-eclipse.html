@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Wordpress 3.5 and Broken Eclipse Theme KenIngle.com</title>
+
+    <link rel="stylesheet" href="/theme/css/main.css">
+    <link rel="stylesheet" href="/theme/css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div><img src="http://www.gravatar.com/avatar/f4abeb025b3a14c71c4fc44be1191497?s=120&d=http%3A%2F%2Fwww.example.com%2Fdefault.jpg" class="grv-img"/></div>
+        <div class="title"><a href="/">KenIngle.com </a></div>
+        <div class="sub-title">Random thoughts about technology, travel and other things that interest me.</div>
+
+        <p>
+      <div class="view"><a href="/pages/about.html">About</a></div>
+    <div class="view"><a href="/archives.html">Archives</a></div>
+</p>
+
+<!-- Social links -->
+<div class="social">
+<h4>Follow Me</h4>
+<ul>
+      <li><a href="https://github.com/keningle">Github</a></li>
+      <li><a href="http://twitter.com/ken_ingle">Twitter</a></li>
+      <li><a href="http://www.linkedin.com/in/kingle">LinkedIn</a></li>
+      <li><a href="https://plus.google.com/112319762460398400993/posts">Google+</a></li>
+  </ul>
+</div>
+
+      </header>
+      <section>
+      <section id="content" class="body">
+  <article>
+      <div class="article-title">
+        Wordpress 3.5 and Broken Eclipse Theme
+      </div>
+
+    <div class="entry-content">
+      <p>
+<small>
+<abbr class="published" title="2013-01-20T00:00:00">
+  Sun 20 January 2013
+</abbr> | 
+  tags: 
+      <a href="/tag/wordpress.html">wordpress</a>, 
+      <a href="/tag/php.html">php</a>, 
+   -- (<a href="/wordpress35-eclipse.html" rel="bookmark">permalink</a>)
+</small>
+</p>      <p>There are a couple of wordpress sites that I maintain. The nice thing about wordpress is that most of the time it is pretty easy to maintain and manage upgrades. The key is “most" of the time. I purchased a custom theme for a website that I manage called Eclipse. Unfortunately it does not seem to be maintained any longer and when I upgraded the site to wordpress 3.5, it broke. Word for the wise, backup your wordpress database before a seemingly minor upgrade. Yes, I know I should have done a backup. The Eclipse theme breaks when trying to use the Attachments plugin. Even if you upgrade the plugin, the theme is still broken. I did find a quick way to fix the problem. Just wrap the call for the attachments plugin in page.php and single.php with the following function:</p>
+<div class="highlight"><pre><span class="x">if (function_exists(&#39;function_name&#39;)) { </span>
+<span class="x">  function_name() </span>
+<span class="x">}</span>
+</pre></div>
+
+
+<p>This will then check for the plugin before trying to run the code. This is not a perfect fix, but has bought me a bit of time until I troubleshoot the root problem. I thought it may be a useful bit of information for someone like me, a non-php guy (python guy) who happens to manage a couple of small sites with wordpress.</p>
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="ken_ingle">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</section>
+      </section>
+      <footer>
+        <p><small>&copy; KenIngle.com &mdash; Theme based on Sundown by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <!-- Scale fix -->
+    <script>
+      var metas = document.getElementsByTagName('meta');
+      var i;
+      
+      if (navigator.userAgent.match(/iPhone/i)) {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+          }
+        }
+      
+        document.addEventListener("gesturestart", gestureStart, false);
+      }
+
+      function gestureStart() {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
