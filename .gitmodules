@@ -1,6 +1,3 @@
-[submodule "keningle.github.io"]
-	path = keningle.github.io
-	url = https://github.com/keningle/keningle.github.io.git
 [submodule "output"]
 	path = output
 	url = https://github.com/keningle/keningle.github.io.git
