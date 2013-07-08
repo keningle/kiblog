@@ -1,4 +1,4 @@
-Title: My Development Stack (2011) 
+Title: Open Class - Online Education Game Changer? 
 Date: 2011-10-11 
 Tags: education, online-education, edtech
 Slug: open-class-game-changer
