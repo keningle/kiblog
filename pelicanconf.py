@@ -16,7 +16,7 @@ GRV_SIZE = 120
 GRV_URL = "http://www.gravatar.com/avatar/" + hashlib.md5(EMAIL.lower()).hexdigest() + "?"
 GRV_URL += urllib.urlencode({'d':DEFAULT_GRV_URL, 's':str(GRV_SIZE)})
 
-SITESUBTITLE = u'Random thoughts about technology, travel and other things that interest me.'
+SITESUBTITLE = u'Random thoughts about technology, travel and other things I find interesting.'
 
 LOCALE = ('en_us',)
 DATE_FORMATS = {'en_us': '%a, %b %d, %Y', }
@@ -41,7 +41,7 @@ DEFAULT_PAGINATION = 5
 #RELATIVE_URLS = True
 
 # Selec the theme
-THEME = 'themes/github-sundown'
+THEME = '../pelican-sundown'
 
 # Enable Disqus
 DISQUS_SITENAME = 'keningleblog'
@@ -51,3 +51,4 @@ TWITTER_USERNAME = 'ken_ingle'
 
 # Summary length
 SUMMARY_MAX_LENGTH = 50
+

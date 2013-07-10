@@ -195,7 +195,7 @@ footer {
   width:270px;
   float:left;
   position:fixed;
-  bottom:50px;
+  bottom:10px;
 }
 
 @media print, screen and (max-width: 960px) {
@@ -257,7 +257,7 @@ footer {
   }
   
   header ul {
-    display:none;
+    padding-bottom: 10px;
   }
 }
 
